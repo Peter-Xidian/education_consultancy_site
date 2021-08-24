@@ -135,23 +135,6 @@ img {
   height: 4.5rem;
 }
 
-/* -=- ACTIVE MENU-=-*/
-/* --- Active Link ---*/
-.active {
-  position: relative;
-}
-
-.active::before {
-  content: "";
-  position: absolute;
-  bottom: -0.5rem;
-  left: 45%;
-  width: 4px;
-  height: 4px;
-  background-color: var(--dark-yellow);
-  border-radius: 50%;
-}
-
 /* ==== SCROLLTOP === */
 
 /*-- Scroll top --*/

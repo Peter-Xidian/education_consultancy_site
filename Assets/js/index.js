@@ -88,3 +88,18 @@ for (let i = 0; i < thumbnails.length; i++) {
     return (play = setInterval(autoPlay, 30));
   });
 }
+
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "30px",
+  duration: 2000,
+  reset: true,
+});
+
+sr.reveal(
+  `.hero__info, .b__info, .about__img, .about__info, #s-s, .main__form`,
+  {
+    interval: 200,
+  }
+);
