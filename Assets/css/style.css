@@ -133,6 +133,7 @@ img {
   z-index: 2000;
   transition: 0.3s;
   height: 4.5rem;
+  padding: 2.5rem 0;
 }
 
 /* ==== SCROLLTOP === */
@@ -206,12 +207,12 @@ header {
 
 .mininav__list li {
   margin-right: 2rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .nav__icon {
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  margin-right: 0.3rem;
   vertical-align: middle;
 }
 
@@ -228,11 +229,18 @@ header {
 
 .h__social {
   font-size: 1.3rem;
-  margin-right: 1rem;
+  margin-right: var(--mb-1);
   transition: 0.3s;
   color: var(--white-color);
   cursor: pointer;
-  padding-right: var(--mb-2);
+  padding: 0.3rem;
+  border: 1px var(--primary) solid;
+  border-radius: 5px;
+}
+
+.h__social:hover {
+  background: white;
+  color: var(--primary-light);
 }
 
 /* --main_nav --*/
@@ -247,11 +255,12 @@ nav {
   border-bottom: 1px #e0e0e0 solid;
   letter-spacing: 0;
   opacity: 1;
+  padding: 3rem 0;
 }
 
 nav ul li {
   margin-right: 2rem;
-  font: normal normal 500 1rem var(--body-font);
+  font: normal normal 500 var(--mb-2) var(--body-font);
   transition: all 0.3s;
 }
 
@@ -260,7 +269,7 @@ nav ul li {
 }
 
 nav a {
-  font: normal normal 500 1rem var(--body-font);
+  font: normal normal 500 var(--mb-2) var(--body-font);
 }
 
 #logo {
@@ -271,20 +280,21 @@ nav a {
 .btn {
   padding: 1rem 2rem;
   background: var(--primary-light) 0% 0% no-repeat padding-box;
-  border-radius: 2px;
+  border-radius: 5px;
   transition: all 0.3s;
   color: var(--secondary);
+  border: 1.5px var(--primary-light) solid;
 }
 
 .btn:hover {
   background: transparent;
-  border: 1.5px var(--secondary) solid;
+  border: 1.5px var(--primary-light) solid;
 }
 
 /* ==== HERO SECTION === */
 .hero__container {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   padding: var(--mb-10) 5.5rem;
   display: flex;
   justify-content: center;
@@ -316,6 +326,18 @@ nav a {
   color: #808291;
 }
 
+@keyframes hborder {
+  0% {
+    border: 2px var(--secondary-light) dashed;
+  }
+  50% {
+    border: 2px var(--primary) dashed;
+  }
+  100% {
+    border: 2px var(--secondary) dashed;
+  }
+}
+
 .hero__img {
   flex: 0 0 47%;
   height: auto;
@@ -323,6 +345,9 @@ nav a {
   border-bottom-left-radius: 90px;
   border-top-right-radius: 90px;
   overflow: hidden;
+  border: 2px var(--secondary-light) dashed;
+  transition: all 0.3s;
+  animation: hborder 3s linear 2s infinite alternate;
 }
 
 .hero__info a {
@@ -344,7 +369,7 @@ nav a {
   justify-content: center;
   align-items: center;
   height: 70vh;
-  margin-bottom: 18rem;
+  margin-bottom: 17rem;
 }
 
 .bio::before {
@@ -390,6 +415,7 @@ nav a {
   font: normal normal var(--font-normal) var(--normal-size) var(--body-font-b);
   margin-bottom: var(--mb-3);
   color: #333;
+  line-height: 1.8;
 }
 
 .b__info img {
@@ -419,7 +445,7 @@ nav a {
 
 .bio__img img {
   position: absolute;
-  top: -375;
+  top: -363;
   left: -80;
 }
 
@@ -495,7 +521,7 @@ nav a {
   /* border: 2px green solid; */
   padding: 3rem 7rem 5rem 7rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #s-s {
@@ -594,6 +620,126 @@ nav a {
   transform: scale(0.95);
 }
 
+/* ==== FORM SECTION === */
+.contact {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 3rem 7rem 5rem 7rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* border: 2px darkred solid; */
+}
+
+.c__img {
+  flex: 0 0 55%;
+  height: auto;
+  overflow: hidden;
+  border-top-left-radius: 90px;
+}
+
+.c__img img {
+  width: auto;
+  height: auto;
+}
+
+.c__form {
+  position: absolute;
+  right: 120;
+  width: 48%;
+  height: auto;
+  /* border: 1px teal solid; */
+  padding: var(--mb-6) var(--mb-6);
+  text-align: center;
+  border-bottom-right-radius: 90px;
+  box-shadow: 0px 3px 16px #0000001f;
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+
+.c__form h3 {
+  font: normal normal var(--font-semi-bold) var(--mb-4) var(--body-font);
+  margin-bottom: var(--mb-2);
+  color: var(--secondary);
+}
+
+.c__form p {
+  font: normal normal var(--font-normal) var(--mb-2) var(--body-font-b);
+  line-height: 1.6;
+  color: #717477;
+  margin: 0 var(--mb-4) var(--mb-2) var(--mb-4);
+}
+
+form {
+  /* border: 1px darkgreen solid; */
+  padding: 2rem var(--mb-5);
+}
+
+.f__input {
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--primary);
+  background: none;
+  padding: var(--mb-2) var(--mb-3);
+  color: var(--text-dark);
+  font: normal normal var(--font-normal) var(--mb-2) var(--body-font-b);
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-bottom: 1.5rem;
+}
+
+textarea.f__input {
+  padding: 0.8rem 1.2rem;
+  min-height: 150px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.f__btn {
+  padding: 1rem 2rem;
+  background: var(--primary-light) 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  transition: all 0.3s;
+  color: var(--secondary);
+  font: normal normal var(--font-normal) var(--mb-2) var(--body-font-b);
+  line-height: 1;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+  text-transform: uppercase;
+  border: 1.5px var(--primary-light) solid;
+}
+
+.f__btn:hover {
+  background: transparent;
+  border: 1.5px var(--primary-light) solid;
+}
+
+@keyframes cicon {
+  25% {
+    color: var(--secondary-light);
+  }
+  50% {
+    color: var(--primary-light);
+  }
+  100% {
+    color: var(--secondary);
+  }
+}
+
+#c-icon {
+  position: absolute;
+  color: var(--secondary-light);
+  font-size: var(--mb-4);
+  top: 730;
+  right: 310;
+  transition: all 0.3s;
+  animation: cicon 3s linear 2s infinite alternate;
+}
+
 /* ==== FOOTER SECTION === */
 footer {
   /* position: fixed; */
@@ -643,8 +789,31 @@ footer {
   color: var(--primary-light);
 }
 
+.f__social {
+  font-size: 1.3rem;
+  margin-right: var(--mb-1);
+  transition: 0.3s;
+  color: var(--white-color);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+}
+
+.f__social i {
+  vertical-align: middle;
+  padding: 0.3rem;
+  transition: all 0.3s;
+  border: 1px #0d3642 solid;
+}
+
+.f__social i:hover {
+  background: white;
+  color: var(--primary);
+  border-radius: 5px;
+}
+
 .f__qlinks {
-  flex: 0 0 40%;
+  flex: 0 0 15%;
   margin-bottom: var(--mb-6);
 }
 
