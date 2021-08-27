@@ -88,12 +88,9 @@ const sr = ScrollReveal({
   reset: true,
 });
 
-sr.reveal(
-  `.hero__info, .b__info, .about__img, .about__info, #s-s, .main__form`,
-  {
-    interval: 200,
-  }
-);
+sr.reveal(`.hero__info, .b__info, .about__info, #s-s, .main__form`, {
+  interval: 200,
+});
 
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
