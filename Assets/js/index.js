@@ -100,3 +100,18 @@ function scrollTop() {
   else scrollTop.classList.remove("show-scroll");
 }
 window.addEventListener("scroll", scrollTop);
+
+/*==================== MENU SHOW Y HIDDEN ====================*/
+const navMenu = document.getElementById("rnav-menu"),
+  toggleMenu = document.getElementById("nav-toggle"),
+  closeMenu = document.getElementById("nav-close");
+
+/*-=- SHOW -=-*/
+toggleMenu.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+
+/*-=- HIDDEN -=-*/
+closeMenu.addEventListener("click", () => {
+  navMenu.classList.remove("show");
+});
