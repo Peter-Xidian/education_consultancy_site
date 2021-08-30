@@ -1122,9 +1122,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 80vh;
     margin: 0;
-    margin-bottom: 60%;
+    margin-bottom: 50%;
   }
 
   .bio::before {
@@ -1198,7 +1198,7 @@ footer {
     padding: 2rem 1.5rem;
     /* border: 2px green solid; */
     margin: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-align: center;
   }
 
