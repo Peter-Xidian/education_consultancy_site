@@ -1110,7 +1110,7 @@ footer {
     background: #0d3642;
     width: 100%;
     position: relative;
-    /* border: 1.5px red solid; */
+    border: 1.5px red solid;
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -1137,8 +1137,8 @@ footer {
     flex-direction: column;
     text-align: center;
     top: 120;
-    /* border: 2px green solid; */
-    margin: 0 8rem;
+    border: 2px green solid;
+    margin: 0 2rem;
     box-shadow: 0px 3px 16px #0000001f;
   }
 
